@@ -1,0 +1,33 @@
+# =============================================
+# config.yaml – Cấu hình toàn bộ ứng dụng
+# Thay URL camera bằng IP thực tế của bạn!
+# =============================================
+
+camera:
+  # URL của IP Webcam (Android) hoặc DroidCam
+  # Thay <ip> bằng IP điện thoại hiển thị trong app
+  url: "http://172.16.1.100:8080/video"
+  buffer_size: 1         # giảm độ trễ
+  width: 640
+  height: 480
+
+model:
+  cnn_path: "weights/model_cnn.pt"
+  mobilenet_path: "weights/model_mobilenet.pt"
+  confidence_threshold: 0.4    # bỏ qua dự đoán dưới 40% confidence
+  num_classes: 7
+  # Thứ tự phải khớp với ImageFolder khi train trên Kaggle (alphabetical)
+  class_names:
+    - "Angry"
+    - "Disgust"
+    - "Fear"
+    - "Happy"
+    - "Neutral"
+    - "Sad"
+    - "Surprise"
+
+inference:
+  face_detector: "auto"   # "auto" (tự động chọn YuNet ONNX trên OpenCV 5.x), "haar" hoặc "dnn"
+  target_fps: 20
+
+

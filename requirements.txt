@@ -1,0 +1,26 @@
+# =============================================
+# Lab 1 – Nhận diện cảm xúc khuôn mặt
+# requirements.txt – dùng cho máy LOCAL (CPU)
+# =============================================
+
+# Deep Learning (CPU-only để nhẹ hơn)
+# Cài bằng lệnh riêng:
+# pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+torch>=2.0.0
+torchvision>=0.15.0
+
+# Computer Vision
+opencv-python>=4.8.0
+
+# Xử lý ảnh
+Pillow>=9.0.0
+numpy>=1.24.0
+
+# Cấu hình
+PyYAML>=6.0
+
+# Đánh giá model
+scikit-learn>=1.3.0
+
+# Vẽ đồ thị (tùy chọn, dùng khi cần xem confusion matrix local)
+matplotlib>=3.7.0
